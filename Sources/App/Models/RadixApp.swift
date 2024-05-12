@@ -1,8 +1,9 @@
 import Fluent
+import Vapor
 import struct Foundation.UUID
 
 
-final class RadixApp: Model, @unchecked Sendable {
+final class RadixApp: Model, Content, @unchecked Sendable {
     static let schema = "radix_apps"
     @ID(key: .id)
     var id: UUID?

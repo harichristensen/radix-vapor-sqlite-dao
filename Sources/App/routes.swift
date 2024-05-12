@@ -3,7 +3,7 @@ import Vapor
 
 func routes(_ app: Application) throws {
     app.get { req async throws in
-        try await req.view.render("index", ["title": "Hello Vapor!"])
+        try await req.view.render("home", ["title": "Hello Vapor!"])
     }
 
     app.get("hello") { req async -> String in
@@ -11,6 +11,7 @@ func routes(_ app: Application) throws {
     }
 
     try app.register(collection: TodoController())
-    try app.register(collection: RadixAppsController())
+    let radixAppsController = RadixAppsController()
+    try app.register(collection: radixAppsController)
 
 }

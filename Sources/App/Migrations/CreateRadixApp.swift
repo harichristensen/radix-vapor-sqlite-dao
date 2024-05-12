@@ -4,8 +4,8 @@ struct CreateRadixApp: AsyncMigration {
     func prepare(on database: Database) async throws {
         try await database.schema("radix_apps")
             .id()
-            .field("address", .string)
-            .field("owner", .string)
+            .field("address", .string, .required)
+            .field("owner", .string, .required)
             .create()
     }
 
