@@ -1,9 +1,6 @@
 Pre-requisites:
-1. Install Swift, Rust, Vapor, OpenAPI, Rust
-For RadixDLT:
-  Installed rust clang build-essential llvm
-  rustup target add wasm32-unknown-unknown
-$ swift run App serve
+1. Only runs on MacOS because Swift Radix Engine Toolkit wrapper contains dynamic libraries
+
 
 
 RadixDLT Technologies

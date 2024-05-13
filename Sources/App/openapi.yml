@@ -5,10 +5,12 @@ info:
 servers:
   - url: http://127.0.0.1:8080/api
     description: Localhost deployment.
+  - url: https://stokenet.radixdlt.com
+    description: Access to radix gatewayapi.
 paths:
-  /greet:
+  /account:
     get:
-      operationId: getGreeting
+      operationId: getAccount
       parameters:
         - name: name
           required: false
