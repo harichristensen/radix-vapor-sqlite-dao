@@ -3,8 +3,8 @@ info:
   title: GreetingService
   version: 1.0.0
 servers:
-  - url: https://example.com/api
-    description: Example service deployment.
+  - url: http://127.0.0.1:8080/api
+    description: Localhost deployment.
 paths:
   /greet:
     get:
@@ -27,10 +27,8 @@ components:
   schemas:
     Greeting:
       type: object
-      description: A value with the greeting contents.
       properties:
         message:
           type: string
-          description: The string representation of the greeting.
       required:
         - message
