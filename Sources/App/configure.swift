@@ -14,7 +14,6 @@ public func configure(_ app: Application) async throws {
     app.migrations.add(CreateRadixApp())
 
     app.views.use(.leaf)
-
     app.logger.logLevel = .debug
 
     try await app.autoMigrate()

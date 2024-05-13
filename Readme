@@ -1,1 +1,15 @@
+Pre-requisites:
+1. Install Swift, Rust, Vapor, OpenAPI, Rust
+For RadixDLT:
+  Installed rust clang build-essential llvm
+  rustup target add wasm32-unknown-unknown
 $ swift run App serve
+
+
+RadixDLT Technologies
+Radix Engine Toolkit
+ - Connects to users wallet
+ - Create and sign transactions
+Gateway API
+ - Submit transactions
+ - Check transaction status
