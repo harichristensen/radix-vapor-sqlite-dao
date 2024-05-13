@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>#(title) | dAppStore</title>
+  <style>
+                .grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                    gap: 20px;
+                    padding: 20px;
+                }
+                .card {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+                .card img {
+                    width: 100%;
+                    height: auto;
+                }
+                .card button {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: blue;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+    </style>
+</head>
+<body>
+    <p>Welcome to Radix</p>
+    #import("content")
+</body>
+</html>

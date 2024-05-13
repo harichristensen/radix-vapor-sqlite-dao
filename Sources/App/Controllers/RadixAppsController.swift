@@ -3,10 +3,11 @@ import Vapor
 
 struct RadixAppsController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
-        routes.post("api", "radix_apps", use: createHandler)
-        routes.get("api", "radix_apps", use: getAllHandler)
+        let radixRoutes = routes.grouped("api", "radix_apps")
+        
+        radixRoutes.get(use: getAllHandler)
+        radixRoutes.post(use: createHandler)
 
-        // let radix_apps = routes.grouped("radix_apps")
     }
 
     func createHandler(_ req: Request) async throws -> RadixApp {
