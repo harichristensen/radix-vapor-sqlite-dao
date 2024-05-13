@@ -10,3 +10,9 @@ Radix Engine Toolkit
 Gateway API
  - Submit transactions
  - Check transaction status
+To use the custom generator, you would typically run it via the command line like this:
+$ java -jar path_to_openapi-generator-cli-6.1.1-custom.jar generate \
+  -i path_to_gateway-api-schema.yaml \
+  -g swift5 \
+  -o output_directory \
+  --additional-properties=library=vapor

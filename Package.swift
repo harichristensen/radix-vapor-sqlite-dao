@@ -20,7 +20,8 @@ let package = Package(
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.6.0"),
         // 🍃 An expressive, performant, and extensible templating language built for Swift.
         .package(url: "https://github.com/vapor/leaf.git", from: "4.3.0"),
-        .package(url: "https://github.com/radixdlt/swift-engine-toolkit", exact: "1.0.0")
+        .package(url: "https://github.com/radixdlt/swift-engine-toolkit", exact: "1.0.0"),
+        .package( url: "https://github.com/Flight-School/AnyCodable", from: "0.6.0")
     ],
     targets: [
         .executableTarget(
@@ -38,6 +39,10 @@ let package = Package(
             plugins: [
                 .plugin(name: "OpenAPIGenerator", package: "swift-openapi-generator"),
             ]
+        ),
+        .target(
+            name: "OpenAPIClient",
+            dependencies: ["AnyCodable", ]
         ),
         .testTarget(
             name: "AppTests",
